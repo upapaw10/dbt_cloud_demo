@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: google_sheets
+    description: "Raw data ingested by Fivetran from Google Sheets"
+    database: FIVETRAN_DATABASE
+    schema: GOOGLE_SHEETS
+
+    tables:
+      - name: CUSTOMER_SRC
+        description: "Customer master data (raw from Google Sheets)"
+      - name: PRODUCT_SRC
+        description: "Product details (raw from Google Sheets)"
+      - name: ORDER_SRC
+        description: "Order header data (raw from Google Sheets)"
+      - name: ORDER_ITEM_SRC
+        description: "Order line-level data (raw from Google Sheets)"
